@@ -8,7 +8,7 @@ public class Overflow {
 	    for (int i = 0; i < 64; i++)
 	    {
 			System.out.print("n: " + n + "\n");
-			Thread.sleep(2000);
+			Thread.sleep(500);
 	        n = n * 2;
 	    }
 	}
