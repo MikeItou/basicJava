@@ -7,12 +7,10 @@ import javax.swing.*;
 public class Triangulo {
     public static void main(String[] args) {
         int altura;
-        int impresion;
         String simbolo = "#";
         char respuesta;
 
         do{
-            impresion = 1;
 
             altura = Input.get_int("Ingrese la altura del triangulo: ");
 
@@ -21,31 +19,27 @@ public class Triangulo {
                 altura = Input.get_int("Ingrese la altura del triangulo: ");
             }
             //justificacion a la izquiera
-            System.out.println("Triangulo justificado a la izquierda:");
-            for (int i = 0;i < altura; i++){
-                for (int j = 0;j < impresion; j++){
+            System.out.print("Triangulo justificado a la izquierda:");
+            for (int i = 0;i <= altura; i++){
+                for (int j = 0;j < i; j++){
                     System.out.print(simbolo);
                 }
                 System.out.println();
-                impresion++;
             }
             //justificacion a la derecha
-            impresion = 1;
-            System.out.println("Triangulo justificado a la derecha:");
-            for (int i = 0;i < altura; i++){
+            System.out.print("Triangulo justificado a la derecha:");
+            for (int i = 0;i <= altura; i++){
                 espacios(altura - i);
-                for (int j = 0;j < impresion; j++){
+                for (int j = 0;j < i; j++){
                     if(j==0)
                         System.out.print(simbolo);
                     System.out.print(simbolo);
                 }
                 System.out.println();
-                impresion++;
             }
 
             respuesta = Input.get_char("Desea continuar (y/n)? ");
         }while(Character.toLowerCase(respuesta) == 'y');
-
 
     }
 
